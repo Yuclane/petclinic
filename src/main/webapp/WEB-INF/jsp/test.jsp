@@ -29,25 +29,5 @@
           out.println(name + ":<BR>" + request.getHeader(name) + "<BR><BR>");
       }%>
     </font>
-    <hr color="#000000" />
-    <h3>MYSQL CONNECTION TEST</h3>
-    <font>
-    <%
-      Connection conn = null;
-      try{
-        String url = "jdbc:mysql://rds-mysql.cblfmzidovrx.ap-northeast-2.rds.amazonaws.com:3306/petclinic";
-        String id = "petclinicadmin"; // 사용자계정
-        String pw = "Pa$$w0rd2025"; // 사용자계정 패스워드
-
-        Class.forName("com.mysql.jdbc.Driver");
-        conn=DriverManager.getConnection(url,id,pw);
-
-        out.println("DB Connected");
-
-      } catch(Exception e) {
-        out.println(e.toString());
-      }
-      %>
-    </font>
 </html>
 </petclinic:layout>
